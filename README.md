@@ -9,3 +9,5 @@ I've included the files for the following:
 5. Views for aggregated summary stats and other convenient queries for analysis
 6. Images of Dashboards created in Tableau using aggregated data from MySQL
 7. PowerPoint Presentation for the case study
+
+Link to the summary dashboard I created in Tableau Public: https://public.tableau.com/views/CyclisticAggregateDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
