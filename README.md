@@ -1,15 +1,22 @@
-### Project Overview:
+Table of Contents
+- [Project Overview](#project-overview)
+- [SQL Code](#sql-code)
+- [Conclusion](#conclusions)
+
+
+
+### Project Overview
 - Cyclistic is a bikesharing company in Chicago.
 - Current business structure based on single ride passes, single day passes and annual memberships.
 - Company wants to convert casual riders (single ride and single day passes) to members.
 - Head of Marketing assigns me as an analyst to understand Cyclistic users for business decision making.
 
-### Guiding questions for case study:
+### Guiding questions for case study
  1. How do annual members and casual riders use Cyclistic bikes differently?
  2. Why would casual riders buy Cyclistic annual memberships?
  3. How can Cyclistic use digital media to influence casual riders to become members?
 
-### Files Included:
+### Files Included
 - Case Study prompt.
 - SQL code for creating tables, importing data, creating views and convienient queries.
 - Images of Dashboards created in Tableau using aggregated data from MySQL.
@@ -17,24 +24,24 @@
 
 ### Tableau Public Dashboard: https://public.tableau.com/views/CyclisticAggregateDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
 
-### Tools Used:
+### Tools Used
 - Excel
 - PowerQuery
 - MySQL
 - Tableau
 - PowerPoint
 
-### Excel Data Cleaning/Preperation :
+### Data Cleaning/Preperation (Excel)
 - Removed rows with blank columns due to volme of files (all over 30mb)
 - Formatted data types
 - Created calculated fields such as ride length
 - Converted dates to specfiy weekdays and months in new columns
 
-### Power Query application:
+### Power Query Application
 - Due to size of datasets, used Power Query to create Power Pivot tables for macro overview of dataset (primairly to understand ride count volume by month).
 - File size too large to upload to GitHub, as well as too large for Tableau Public to function properly, so used SQL to sample data for statistical signficance.
 
-### SQL Code:
+### SQL Code
 - Table Creation:
 
 ```sql
@@ -60,7 +67,7 @@ USE google_analytics_capstone ;
 );
 ```
 
-- Loading Data:
+- Loading Data
 ```sql
 -- Did this for every month's CSV file. started_at/ended_at required reformatting in date format.
 
@@ -87,7 +94,7 @@ SET ride_id = @ride_id,
     month = @month;
 ```
 
-- Combining Data:
+- Combining Data
 ```sql
 -- Figuring out sample size for accurate analysis in order to condense data into usable memory size for tableau public upload (<1 GB)
 
@@ -164,7 +171,7 @@ UNION
 
 ```
 
-- Views Created (grouping months required cleaning whitespace):
+- Views Created (grouping months required cleaning whitespace)
 ```sql
 
 CREATE VIEW stats_by_month AS 
@@ -222,7 +229,7 @@ ORDER BY minutes_ridden DESC
 
 ```
 
-- Queries for finding Top 10 Starting Stations by membership type:
+- Queries for finding Top 10 Starting Stations by membership type
 
 ```sql
 SELECT
@@ -255,8 +262,8 @@ ORDER BY num_of_rides DESC
 
 LIMIT 10;
 ```
-### Tableau:
-- Used Tableau Public to create multiple interactive dashboards answering questions such as:
+### Tableau
+- Used Tableau Public to create multiple interactive dashboards answering questions such as
   - Where are they riding?
   - What time are they riding?
   - What days are they riding?
@@ -264,7 +271,7 @@ LIMIT 10;
 
 
 
-## Conclusions:
+## Conclusions
 
 ### Why would casual riders buy annual memberships?
 - Casual Riders, though at lower rates, bike year-round and could benefit from annual rates.
@@ -280,7 +287,7 @@ LIMIT 10;
 - Offer discounts and present benefits of annual memberships on weekends when casual riders are most likely to use Cyclistic’s services.
 
 
-### Further Recommendations: 
+### Further Recommendations
 - Need more data on consumers such as user’s gender, age, demographic and address to get a better understand of who’s using Cyclistic as to inform marketing strategy.
 - Further insight into pricing models as to offer a more comprehensive understanding regarding the benefits of memberships over single use/full day passes
 - More granularity in what makes up the casual rider category. Segmenting between single use and full day pass users would allow more accuracy in tracking behaviors for targeted marketing purposes. 
