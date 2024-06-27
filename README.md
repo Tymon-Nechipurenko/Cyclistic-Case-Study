@@ -9,11 +9,11 @@
  2. Why would casual riders buy Cyclistic annual memberships?
  3. How can Cyclistic use digital media to influence casual riders to become members?
 
-### Files Included
-1. Case Study prompt.
-2. SQL code for creating tables, importing data, creating views and convienient queries.
-3. Images of Dashboards created in Tableau using aggregated data from MySQL.
-4. PowerPoint Presentation for the case study.
+### Files Included:
+- Case Study prompt.
+- SQL code for creating tables, importing data, creating views and convienient queries.
+- Images of Dashboards created in Tableau using aggregated data from MySQL.
+- PowerPoint Presentation for the case study.
 
 ### Tableau Public Dashboard: https://public.tableau.com/views/CyclisticAggregateDashboard/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link
 
